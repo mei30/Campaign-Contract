@@ -1,0 +1,25 @@
+{
+  "name": "campaign-contract",
+  "version": "1.0.0",
+  "description": "This project intended to be a smart contract for funding money for product ideas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mei30/Campaign-Contract.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mei30/Campaign-Contract/issues"
+  },
+  "homepage": "https://github.com/mei30/Campaign-Contract#readme",
+  "dependencies": {
+    "fs-extra": "^11.1.1",
+    "ganache-cli": "^6.12.2",
+    "mocha": "^10.2.0",
+    "solc": "^0.4.17"
+  }
+}
