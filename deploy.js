@@ -1,6 +1,6 @@
 const HDwalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
-const { interface, bytecode } = require('./compiler');
+const compiledFactory = require("../build/CampaignFactory.json");
 
 async function main() {
   // Configuring the connection to an Ethereum node
@@ -18,9 +18,9 @@ async function main() {
   web3.eth.accounts.wallet.add(signer);
 
   // Using the signing account to deploy the contract
-  const contract = new web3.eth.Contract(JSON.parse(interface));
+  const contract = new web3.eth.Contract(JSON.parse(compiledFactory.interface));
 
-  contract.options.data = bytecode;
+  contract.options.data = compiledFactory.bytecode;
   const deployTx = contract.deploy();
 
   const deployedContract = await deployTx
